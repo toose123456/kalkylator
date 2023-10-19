@@ -6,7 +6,7 @@ class Calculator:
     def __init__(self, master):
         self.master = master
         self.master.title('Калькулятор')
-        self.master.geometry("305x140")
+        self.master.geometry("305x132")
 
         self.number_entry = ttk.Entry(self.master, width=20)
         self.number_entry.grid(row=0, column=0, columnspan=5, padx=5, pady=5)
@@ -139,11 +139,6 @@ class Calculator:
             current = '-' + current
         self.number_entry.delete(0, tk.END)
         self.number_entry.insert(0, current)
-
-if __name__ == '__main__':
-    root = tk.Tk()
-    calc = Calculator(root)
-    root.mainloop()
 
 if __name__ == '__main__':
     root = tk.Tk()
